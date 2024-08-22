@@ -6,7 +6,7 @@ const fileRouter = require('./Routes/File.Route');
 
 
 const corsOptions = {
-  origin: 'https://todo-list-client-sandy.vercel.app',
+  origin: 'https://todolist-client-0nr0.onrender.com',
   AccessControlAllowOrigin: "*", // Replace this with your frontend URL
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   credentials: true,
