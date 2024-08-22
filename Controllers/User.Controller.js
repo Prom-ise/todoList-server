@@ -88,11 +88,12 @@ const register = async (req, res) => {
 
     const emailContent = `<div style="display: flex; justify-content: center; align-items: center;">
                             <div style="box-sizing: border-box; border: 1px solid white; background-color: black; border-radius: 10px; padding: 10px;">
+                            <img src="https://todolist-client-0nr0.onrender.com/assets/todoListLogo-B_pNAm0l.png" alt="TodoList Logo" style="width: 100px; height: 100px; object-fit: contain; margin-bottom: 20px;"/>
                             <h1 style="text-align: center">Verify your Email</h1>
                             <div>
-                            <h4>Hello Your code is: <span style="color: cyan; font-weight: 700;">${verificationCode}</span> as it will confirm your email for Todo list Application</h4>
+                            <h4 style="font-size: 27px">Hello Your code is: <span style="color: cyan; font-weight: 700; font-size: 35px;">${verificationCode}</span> as it will confirm your email for Todo list Application</h4>
                             </div>
-                            <h5 style="color: gainsboro;">The code is valid for <span style="color: white;">20 minutes</span></h5>
+                            <h5 style="color: gainsboro; text-align: center; font-size: 18px">The code is valid for <span style="color: white;">20 minutes</span></h5>
                             </div>
                           </div>`;
     await sendEmail(email, `${verificationCode} is your Todo List App Code`, emailContent);
@@ -163,9 +164,11 @@ const forgotPassword = async (req, res) => {
 
     const emailContent = `<div style="display: flex; justify-content: center; align-items: center;">
                           <div style="box-sizing: border-box; border: 1px solid white; background-color: black; border-radius: 10px; padding: 10px;">
-                          <h1 style="color: blue">Hello,</h1>
-                          <p>Your verification code to reset your password is: <strong>${verificationCode}</strong></p>
-                          <h5 style="color: gainsboro;">The code is valid for <span style="color: white;">20 minutes</span></h5>
+                          <img src="https://todolist-client-0nr0.onrender.com/assets/todoListLogo-B_pNAm0l.png" alt="TodoList Logo" style="width: 100px; height: 100px; object-fit: contain; margin-bottom: 20px;">
+                          <h1 style="text-align: center">Password Reset Verification</h1>
+                          <h2 style="color: gainsboro">Hello,</h2>
+                          <p style="font-size: 27px">Your verification code to reset your password is: <strong style="color: cyan; font-weight: 700; font-size: 35px;">${verificationCode}</strong></p>
+                          <h5 style="color: gainsboro; text-align: center">The code is valid for <span style="color: white;">20 minutes</span></h5>
                           </div>
                           </div>`;
     await sendEmail(email, 'Todo List Application: Password Reset Verification Code', emailContent);
